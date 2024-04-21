@@ -10,7 +10,7 @@ resource "aws_instance" "gurus41" {
 
 resource "aws_s3_bucket" "s3_bucket" {
   bucket = "gurus41-s3-demoss" # change this 
-   # To delete the S3 bucket command "aws s3 rb s3://gurus41-s3-demosse --force  "
+   # To delete the S3 bucket command "aws s3 rb s3://gurus41-s3-demosse --force"
 }
 
 resource "aws_dynamodb_table" "terraform_lock" {
