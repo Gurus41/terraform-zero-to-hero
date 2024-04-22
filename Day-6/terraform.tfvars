@@ -1,1 +1,1 @@
-ami = "ami-053b0d53c279acc90"
+ami = "ami-080e1f13689e07408" # To run another stage.tfvar file command : terraform apply -var-file=stage.tfvar
