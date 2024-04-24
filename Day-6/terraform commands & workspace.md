@@ -24,6 +24,8 @@ Terraform is a popular Infrastructure as Code (IaC) tool used for building, chan
 
 10. terraform import: Imports existing infrastructure into Terraform state. It allows you to bring existing resources under Terraform management without having to recreate them.
 
+11. terraform apply -var-file= <name.tfvars> applies the changes to your infrastructure using variable values specified in the stage.tfvar file.
+
 # Terraform Workspace
 Terraform workspaces are a feature that allows you to manage multiple environments or configurations within a single Terraform configuration. Workspaces provide a way to isolate state files and variables for different environments such as development, staging, and production. Here are some key commands related to Terraform workspaces:
 
@@ -33,6 +35,6 @@ Terraform workspaces are a feature that allows you to manage multiple environmen
 
 3. terraform workspace select <name>: Switches to the workspace with the specified name. This command allows you to switch between different environments or configurations.
 
-4. terraform workspace show: Displays the currently selected workspace.
+4. terraform workspace show : Displays the currently selected workspace.
 
 5. terraform workspace delete <name>: Deletes the workspace with the specified name. Use this command with caution, as it permanently deletes the workspace and its associated state.
