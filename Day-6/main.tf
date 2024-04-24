@@ -8,11 +8,18 @@ variable "ami" {
 
 variable "instance_type" {
   description = "value"
-  
+  type = map(string)  
+
+  default = {
+    "dev" = "t2.micro"
+    "prod" = "t2.mediam"
+    "stage" = "t2.xlarge"
+  }
 }
 
 module "ec2_instance" {
   source = "./modules/ec2_instance"
   ami = var.ami
-  instance_type = var.instance_type
+  instance_type = lookup(var.instance_type,terraform.workspace,"t2.micro")
+
 }
